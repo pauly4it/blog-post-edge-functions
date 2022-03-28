@@ -1,0 +1,102 @@
+name: Run Performance Tests
+
+on: [push]
+
+env:
+  BASE_URL: https://example.cloudfront.net
+
+jobs:
+  root:
+    name: root
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run
+        shell: bash
+        run: |
+          date +"%T"
+          printf "\n"
+          printf "Lookup,Connect,SSLConnect,PreXfer,StartXfer,Total\n"
+          for i in {1..100}
+          do
+            curl -w '%{time_namelookup},%{time_connect},%{time_appconnect},%{time_pretransfer},%{time_starttransfer},%{time_total}' -o /dev/null -s $BASE_URL
+            printf "\n"
+          done
+          printf "\n"
+          date +"%T"
+
+  rootSlash:
+    name: rootSlash
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run
+        shell: bash
+        run: |
+          date +"%T"
+          printf "\n"
+          printf "Lookup,Connect,SSLConnect,PreXfer,StartXfer,Total\n"
+          for i in {1..100}
+          do
+            curl -w '%{time_namelookup},%{time_connect},%{time_appconnect},%{time_pretransfer},%{time_starttransfer},%{time_total}' -o /dev/null -s $BASE_URL/
+            printf "\n"
+          done
+          printf "\n"
+          date +"%T"
+
+  link1:
+    name: link1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run
+        shell: bash
+        run: |
+          date +"%T"
+          printf "\n"
+          printf "Lookup,Connect,SSLConnect,PreXfer,StartXfer,Total\n"
+          for i in {1..100}
+          do
+            curl -w '%{time_namelookup},%{time_connect},%{time_appconnect},%{time_pretransfer},%{time_starttransfer},%{time_total}' -o /dev/null -s $BASE_URL/link1
+            printf "\n"
+          done
+          printf "\n"
+          date +"%T"
+
+  link2:
+    name: link2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run
+        shell: bash
+        run: |
+          date +"%T"
+          printf "\n"
+          printf "Lookup,Connect,SSLConnect,PreXfer,StartXfer,Total\n"
+          for i in {1..100}
+          do
+            curl -w '%{time_namelookup},%{time_connect},%{time_appconnect},%{time_pretransfer},%{time_starttransfer},%{time_total}' -o /dev/null -s $BASE_URL/link2
+            printf "\n"
+          done
+          printf "\n"
+          date +"%T"
+
+  random:
+    name: random
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run
+        shell: bash
+        run: |
+          date +"%T"
+          printf "\n"
+          printf "Lookup,Connect,SSLConnect,PreXfer,StartXfer,Total\n"
+          for i in {1..100}
+          do
+            curl -w '%{time_namelookup},%{time_connect},%{time_appconnect},%{time_pretransfer},%{time_starttransfer},%{time_total}' -o /dev/null -s $BASE_URL/foo
+            printf "\n"
+          done
+          printf "\n"
+          date +"%T"
