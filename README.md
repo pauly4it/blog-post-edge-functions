@@ -8,4 +8,11 @@ The full blog post is available here: https://medium.com/@pauly4it/cloudfront-fu
 
 - `/data` - Curl performance data output in CSV format for each function
 - `/functions` - Function code specific to each service
+- `/notebooks` - Jupyter Notebook with performance calculations
 - `/tests` - GitHub Workflow example to run curl against 5 different paths for a base URL
+
+## Setup
+
+To run the Jupyter Notebook locally, install the required packages first by running:
+
+`pip install -r notebooks/requirements.txt`
