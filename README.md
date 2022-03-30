@@ -1,6 +1,6 @@
 # Edge Function Blog Post Data and References
 
-This repo contains the raw performance data, function code, testing code, and data analysis for my performance comparison of AWS CloudFront Functions, AWS Lambda@Edge, and CloudFlare Workers. My findings show CloudFront Functions are 20% faster than Cloudflare Workers and 230% faster than Lambda@Edge when used as a short link forwarding service:
+This repo contains the raw performance data, function code, testing code, and data analysis for my performance comparison of AWS CloudFront Functions, AWS Lambda@Edge, and Cloudflare Workers. My findings show CloudFront Functions are 20% faster than Cloudflare Workers and 230% faster than Lambda@Edge when used as a short link forwarding service:
 
 ![General performance results](assets/response_performance_results.png)
 
