@@ -1,3 +1,5 @@
+![Article header](assets/article_header.png)
+
 _This article was originally posted to [Medium](https://medium.com/@pauly4it/cloudfront-functions-20-faster-than-cloudflare-workers-230-faster-than-lambda-edge-c65c26221296) and [Dev.to](https://dev.to/pauly4it/cloudfront-functions-20-faster-than-cloudflare-workers-230-faster-than-lambdaedge-dg3). I'm adding this copy to the repo to keep everything related to the post in one place._
 
 How do the big 3 options to run code "at the edge" (CloudFront Functions and Lambda@Edge from AWS and Workers from Cloudflare) compare when it comes to performance?
